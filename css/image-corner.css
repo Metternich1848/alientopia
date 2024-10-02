@@ -1,0 +1,9 @@
+    .rounded-image{ 
+      border-radius: 15px 5px 15px 5px; 
+      overflow: hidden;
+    }
+
+    .cirle-image{
+      border-radius: 50%; 
+      overflow: hidden;
+    }
