@@ -78,7 +78,7 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            font-size: 2em; /* Double the text size */
+            font-size: 1.5em; /* Double the text size */
             font-family: Times New Roman, sans-serif; /* Default font */ 
         }
         .button-column button:lang(zh) {
@@ -101,20 +101,24 @@
             cursor: pointer;
         }
         .color-button {
-            width: 275px; /* Fixed width for buttons */
+            width: 290px; /* Fixed width for buttons */
             height:150px;
             margin: 5px;
             padding: 40px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            font-size: 2em;
+            font-size: 1.5em;
             color: black;
             font-family: Times New Roman, sans-serif;
-            background-color: #FF0000;
+            background-color: #FF0000; 
             text-align: center; 
-            white-space: nowrap; 
-            text-overflow: ellipsis;
+            white-space: normal; /* Allow text to wrap */ 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap; /* Ensure text wraps */
         }
         .color-button:hover {
             opacity: 0.7;
@@ -152,7 +156,7 @@
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis; 
-        font-size: 2em; /* Initial font size */ }
+        font-size: 1.5em; /* Initial font size */ }
     .color-button .text-content.long-text { font-size: 1em; /* Reduce font size if text is too long */ }
 }
     </style>
@@ -194,7 +198,7 @@
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Doodle Maker</button>
             </div>
             <div class="button-row">
-                <button data-url="https://designer.microsoft.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                <button data-url="https://designer.microsoft.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.6em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Microsoft Designer</button>
                 <button data-url="https://www.shakker.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Shakker</button>
