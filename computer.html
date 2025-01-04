@@ -38,24 +38,6 @@
         .logo {
             width: 100px;
         }
-        .search-bar {
-            flex: 1;
-            margin: 0 10px;
-        }
-        .search-bar input {
-            height: 36px; 
-        }
-        .search-bar button {
-            height: 36px; 
-            font-size: 1.4em; /* Increase font size */
-            padding: 0px 5px 0px 5px; /* Increase padding */
-            margin: 0px 0px 0px 0px; 
-            border: 0px 0px 10px 0px; 
-            font-family: Times New Roman, sans-serif;
-            color: black;
-            background: rgb(225, 168, 11);
-            border-radius: 5px;
-        }
         .time {
             font-size: 2.4em; /* Double the size */
             color: rgb(225, 168, 11); /* Change time text color to black */
@@ -65,25 +47,15 @@
             flex-wrap: wrap;
             width: 100%;
             justify-content: center;
-            align-items: center; 
+            align-items: center; /* Ensure vertical alignment */
         }
-        .button-column {
+        .button-row {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
         }
-        .button-column button {
-            flex: 1;
-            margin: 5px;
-            padding: 40px; /* Double the size */
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 1.5em; /* Double the text size */
-            font-family: Times New Roman, sans-serif; /* Default font */ 
-        }
-        .button-column button:lang(zh) {
-            font-family: '標楷體', sans-serif; /* Font for Chinese text */
-        }
+
         .footer {
             display: flex;
             justify-content: center;
@@ -101,29 +73,30 @@
             cursor: pointer;
         }
         .color-button {
-            width: 290px; /* Fixed width for buttons */
-            height:150px;
-            margin: 5px;
-            padding: 40px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 1.5em;
-            color: black;
-            font-family: Times New Roman, sans-serif;
+            width: 135px; /* Reduced width for buttons (quarter of original 290px) */
+            height: 50px; /* Reduced height for buttons (quarter of original 150px) */
+            margin: 5px; 
+            padding: 10px; /* Adjust padding to fit text */ 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            font-size: 0.75em; /* Adjust text size (quarter of original 1.5em) */ 
+            color: black; 
+            font-family: Times New Roman, sans-serif; 
             background-color: #FF0000; 
             text-align: center; 
             white-space: normal; /* Allow text to wrap */ 
             overflow: hidden; 
             text-overflow: ellipsis; 
-            justify-content: center; 
-            align-items: center; 
-            flex-wrap: wrap; /* Ensure text wraps */
+            display: flex; 
+            justify-content: center; /* Center horizontally */ 
+            align-items:center; /* Center vertically */ 
         }
         .color-button:hover {
             opacity: 0.7;
-            color: rgb(252, 250, 250);
+            color: white;
         }
+        
         /* Responsive styles */
 @media (max-width: 768px) {
     .header {
@@ -140,12 +113,12 @@
         flex-direction: column;
         align-items: center;
     }
-    .button-column {
+    .button-row {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .button-column button {
+    .button-row button {
         font-size: 1em; /* Reduce text size on smaller screens */
         padding: 20px; /* Reduce padding on smaller screens */
         margin: 10px; /* Increase margin on smaller screens */
@@ -167,10 +140,7 @@
             <a href="https://metternich1848.github.io/alientopia/"><img id="randomLogo" src="img/Logo_colour_trans.png" 
                 width="50" height="50" alt="Logo"></a>
         </div>
-        <!--<div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search..." onkeydown="if(event.key === 'Enter') performSearch()">
-            <button onclick="performSearch()">Search</button>
-        </div>-->
+
         <div>
             <a href="https://hk.dictionary.search.yahoo.com/" target="_blank"><img src="Computer/Dictionary.png" width="40" height="40" alt="Gmail"></a>
             <a href="https://hotmail.com/" target="_blank"><img src="Computer/Microsoft Logo.png" width="40" height="40" alt="Hotmail"></a>
@@ -192,12 +162,10 @@
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Video Express</button>
                 <button data-url="https://app.talkingphotos.ai/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Talking Photos</button>
-                <button data-url="https://app.humanbot.io/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                <button data-url="https://app.humanbot.io/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 1.9em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">HumanBot</button>
                 <button data-url="https://doodlemakerapp.com/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Doodle Maker</button>
-            </div>
-            <div class="button-row">
                 <button data-url="https://designer.microsoft.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.6em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Microsoft Designer</button>
                 <button data-url="https://www.shakker.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
@@ -208,51 +176,65 @@
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Canva</button>
             </div>
             <div class="button-row">
-                <button data-url="https://picwish.com/"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">PicWish</button>
-                <button data-url="https://elfsight.com/"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Elfsight</button>
-                <button data-url="https://www.hostinger.com/"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Hostinger</button>
-                <button data-url="https://www.youtube.com/watch?v=Video4"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 4</button>
+                <button data-url="https://app.videoexpress.ai/" class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Video Express</button>
+                <button data-url="https://app.talkingphotos.ai/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Talking Photos</button>
+                <button data-url="https://app.humanbot.io/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 1.9em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">HumanBot</button>
+                <button data-url="https://doodlemakerapp.com/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Doodle Maker</button>
+                <button data-url="https://designer.microsoft.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.6em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Microsoft Designer</button>
+                <button data-url="https://www.shakker.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Shakker</button>
+                <button data-url="https://storyteller.mootion.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Mootion</button>
+                <button data-url="https://canva.me/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Canva</button>
             </div>
         </div>
     </fieldset>
 
     <fieldset>
-        <legend><h2>Ai</h2></legend>
+        <legend><h2>Software</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
             <!-- Buttons will be generated by JavaScript -->
             <div class="button-row">
-                <button data-url="https://www.youtube.com/watch?v=1oP5MTPsRow" class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 1</button>
-                <button data-url="https://www.youtube.com/watch?v=dZxaxk_M7us"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 2</button>
-                <button data-url="https://www.youtube.com/watch?v=n8I1qXj6h18"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 3</button>
-                <button data-url="https://www.youtube.com/watch?v=Video4"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 4</button>
+                <button data-url="https://app.videoexpress.ai/" class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Video Express</button>
+                <button data-url="https://app.talkingphotos.ai/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Talking Photos</button>
+                <button data-url="https://app.humanbot.io/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 1.9em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">HumanBot</button>
+                <button data-url="https://doodlemakerapp.com/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Doodle Maker</button>
+                <button data-url="https://designer.microsoft.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.6em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Microsoft Designer</button>
+                <button data-url="https://www.shakker.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Shakker</button>
+                <button data-url="https://storyteller.mootion.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Mootion</button>
+                <button data-url="https://canva.me/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Canva</button>
             </div>
             <div class="button-row">
-                <button data-url="https://www.youtube.com/watch?v=1oP5MTPsRow"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 1</button>
-                <button data-url="https://www.youtube.com/watch?v=dZxaxk_M7us"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 2</button>
-                <button data-url="https://www.youtube.com/watch?v=n8I1qXj6h18"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 3</button>
-                <button data-url="https://www.youtube.com/watch?v=Video4"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 4</button>
-            </div>
-            <div class="button-row">
-                <button data-url="https://www.youtube.com/watch?v=1oP5MTPsRow"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 1</button>
-                <button data-url="https://www.youtube.com/watch?v=dZxaxk_M7us"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 2</button>
-                <button data-url="https://www.youtube.com/watch?v=n8I1qXj6h18"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 3</button>
-                <button data-url="https://www.youtube.com/watch?v=Video4"  class="color-button" style="background-color: #FFFF00; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
-                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Custom Label 4</button>
+                <button data-url="https://app.videoexpress.ai/" class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Video Express</button>
+                <button data-url="https://app.talkingphotos.ai/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Talking Photos</button>
+                <button data-url="https://app.humanbot.io/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 1.9em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">HumanBot</button>
+                <button data-url="https://doodlemakerapp.com/"  class="color-button" style="background-color: #FF0000; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Doodle Maker</button>
+                <button data-url="https://designer.microsoft.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.6em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Microsoft Designer</button>
+                <button data-url="https://www.shakker.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Shakker</button>
+                <button data-url="https://storyteller.mootion.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Mootion</button>
+                <button data-url="https://canva.me/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Canva</button>
             </div>
         </div>
     </fieldset>
@@ -262,9 +244,6 @@
         <div class="elfsight-app-3eb57675-3854-48fc-8abc-b8795b3c52be" data-elfsight-app-lazy></div>
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
             <div class="elfsight-app-64ddf399-7f9d-44a6-8906-4a325ef0cf10" data-elfsight-app-lazy></div>
-        <!--<a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
-        <a href="https://www.youtube.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube"></a>-->
     </div>
 
     <script>
@@ -279,25 +258,6 @@
             currentTime.innerHTML = `${formattedDate} (${weekday}) ${formattedTime}`;
         }
         setInterval(updateTime, 1000);
-
-        // Perform search and highlight text, clear previous highlights
-        function performSearch() {
-            const searchInput = document.getElementById('searchInput').value;
-            const body = document.body;
-            // Clear previous highlights
-            body.innerHTML = body.innerHTML.replace(/<span style="background-color: yellow">(.*?)<\/span>/g, '$1');
-            if (searchInput) {
-                const bodyText = body.innerHTML;
-                const searchText = new RegExp(searchInput, 'gi');
-                const newText = bodyText.replace(searchText, (match) => `<span style="background-color: yellow">${match}</span>`);
-                if (newText === bodyText) {
-                    alert('No result');
-                } else {
-                    body.innerHTML = newText;
-                    window.scrollTo(0, body.innerHTML.indexOf(searchInput));
-                }
-            }
-        }
 
         // Set onclick event for buttons to open respective YouTube links
         document.querySelectorAll('.button-row button').forEach(btn => {
