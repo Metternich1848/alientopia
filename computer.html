@@ -35,6 +35,23 @@
 
         .header a img { margin: 5px; /* Add margin between elements */ }
 
+        .nav {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
+                background: #1c4692;
+                position: -webkit-sticky; /* For Safari */ 
+                position: sticky; 
+                top: 0; 
+                z-index: 1000; 
+            }
+    
+        .nav-link { text-decoration: none; }
+
+        .nav { list-style-type: none; /* Remove list bullets */ 
+                padding-left: 5; /* Remove default left padding */ }
+    
         .logo {
             width: 100px;
         }
@@ -129,13 +146,13 @@
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis; 
-        font-size: 0.9em; /* Initial font size */ }
+        font-size: 0.8em; /* Initial font size */ }
     .color-button .text-content.long-text { font-size: 1em; /* Reduce font size if text is too long */ }
 }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header" style="height: 45px; position: sticky; top: 0; z-index: 1000;">
         <div class="logo">
             <a href="https://metternich1848.github.io/alientopia/"><img id="randomLogo" src="img/Logo_colour_trans.png" 
                 width="50" height="50" alt="Logo"></a>
@@ -160,6 +177,50 @@
         <div class="time" id="currentTime"></div>
     </div>
 
+    <div class="nav" style="height: 50px; padding: 0px 0; line-height:0; position: sticky; top: 40px; z-index: 999;">
+        <ul class="nav" style="display: flex; gap: 15px;">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Web Hosting" style="color:red;font-size: 1.3rem;">Web Hosting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Web Builder" style="color:orange;font-size: 1.3rem;">Web Builder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Template" style="color:yellow;font-size: 1.3rem;">Template</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Icon" style="color:red;font-size: 1.3rem;">Icon</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#Font" style="color:orange;font-size: 1.3rem;">Font</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#Video" style="color:yellow;font-size: 1.3rem;">Video</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Audio" style="color:red;font-size: 1.3rem;">Audio</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Image" style="color:orange;font-size: 1.3rem;">Image</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Tool" style="color:yellow;font-size: 1.3rem;">Tool</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Tutorial" style="color:red;font-size: 1.3rem;">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Web Element" style="color:orange;font-size: 1.3rem;">Web Element</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Ai" style="color:yellow;font-size: 1.3rem;">Ai</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="Web Hosting"></section>	
     <fieldset>
         <legend><h2>Web Hosting</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -185,6 +246,7 @@
         </div>
      </fieldset>
 
+     <section id="Web Builder"></section>
      <fieldset>
         <legend><h2>Web Builder</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -228,6 +290,7 @@
         </div>
      </fieldset>
 
+<section id="Template"></section> 
     <fieldset>
         <legend><h2>Template</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -253,6 +316,7 @@
         </div>
      </fieldset>
 
+<section id="Icon"></section> 
      <fieldset>
         <legend><h2>Icon</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -278,6 +342,7 @@
         </div>
     </fieldset>
 
+<section id="Font"></section> 
     <fieldset>
         <legend><h2>Font</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -303,6 +368,7 @@
         </div>
     </fieldset>
 
+<section id="Video"></section> 
     <fieldset>
         <legend><h2>Video</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -328,6 +394,7 @@
         </div>
     </fieldset>
 
+<section id="Audio"></section> 
     <fieldset>
         <legend><h2>Audio</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -353,6 +420,7 @@
         </div>
     </fieldset>
 
+<section id="Image"></section> 
     <fieldset>
         <legend><h2>Image</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -378,6 +446,7 @@
         </div>
     </fieldset>
 
+<section id="Tool"></section> 
     <fieldset>
         <legend><h2>Tool</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -402,7 +471,8 @@
             </div>
         </div>
     </fieldset>
-    
+
+<section id="Tutorial"></section> 
     <fieldset>
         <legend><h2>Tutorial</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -416,7 +486,7 @@
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Fotor Frames</button>
                 <button data-url="https://www.astralweb.com.tw/full-screen-backround-image/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Full Screen</button>
-                <button data-url="https://ithelp.ithome.com.tw/articles/10291942?sc=iThelpR" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                <button data-url="https://ithelp.ithome.com.tw/articles/10291942?sc=iThelpR" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.8em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Photo Corner</button>
                 <button data-url="https://www.runoob.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Runoob</button>
@@ -427,7 +497,8 @@
             </div>
         </div>
     </fieldset>
-        
+
+<section id="Web Element"></section> 
     <fieldset>
         <legend><h2>Web Element</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -453,12 +524,13 @@
         </div>
     </fieldset>
 
+<section id="Ai"></section> 
     <fieldset>
         <legend><h2>Ai</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
             <!-- Buttons will be generated by JavaScript -->
             <div class="button-row">
-                <button data-url="https://elevenlabs.io/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                <button data-url="https://elevenlabs.io/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.8em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Elevenlabs</button>
                 <button data-url="https://fliki.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
                         onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Fliki</button>
