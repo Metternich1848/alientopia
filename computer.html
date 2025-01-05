@@ -115,7 +115,18 @@
         }
         .section { scroll-margin-top: 150px; /* Adjust based on the header height */ }
 
-    </style>
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .header, .nav { flex-direction: column; align-items: center; }
+        .header div { margin: 10px 0; }
+        .time { font-size: 1.2em; }
+        .buttons-container { flex-direction: column; align-items: center; }
+        .button-row { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+        .button-row button { font-size: 0.9em; padding: 20px; margin: 10px; }
+        .color-button .text-content { display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.9em; }
+        .color-button .text-content.long-text { font-size: 1em; }
+    }
+</style>
 </head>
 <body>
     <div class="header" style="height: 45px; position: sticky; top: 0; z-index: 1000;">
