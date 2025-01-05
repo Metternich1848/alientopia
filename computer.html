@@ -113,42 +113,8 @@
             opacity: 0.7;
             color: white;
         }
-        
-        /* Responsive styles */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .header div {
-        margin: 10px 0; /* Vertical margin for smaller screens */
-    }
-    .time {
-        font-size: 1.2em; /* Reduce size on smaller screens */
-    }
-    .buttons-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .button-row {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .button-row button {
-        font-size: 0.9em; /* Reduce text size on smaller screens */
-        padding: 20px; /* Reduce padding on smaller screens */
-        margin: 10px; /* Increase margin on smaller screens */
-    }
-    .color-button .text-content { 
-        display: block; 
-        width: 100%; 
-        white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis; 
-        font-size: 0.8em; /* Initial font size */ }
-    .color-button .text-content.long-text { font-size: 1em; /* Reduce font size if text is too long */ }
-}
+        .section { scroll-margin-top: 150px; /* Adjust based on the header height */ }
+
     </style>
 </head>
 <body>
@@ -220,7 +186,7 @@
         </nav>
     </div>
 
-    <section id="Web Hosting"></section>	
+    <section id="Web Hosting" class="section"></section>	
     <fieldset>
         <legend><h2>Web Hosting</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -246,7 +212,7 @@
         </div>
      </fieldset>
 
-     <section id="Web Builder"></section>
+     <section id="Web Builder" class="section"></section>
      <fieldset>
         <legend><h2>Web Builder</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -290,7 +256,7 @@
         </div>
      </fieldset>
 
-<section id="Template"></section> 
+<section id="Template" class="section"></section>
     <fieldset>
         <legend><h2>Template</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -316,7 +282,7 @@
         </div>
      </fieldset>
 
-<section id="Icon"></section> 
+<section id="Icon" class="section"></section>
      <fieldset>
         <legend><h2>Icon</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -342,7 +308,7 @@
         </div>
     </fieldset>
 
-<section id="Font"></section> 
+<section id="Font" class="section"></section>
     <fieldset>
         <legend><h2>Font</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -368,7 +334,7 @@
         </div>
     </fieldset>
 
-<section id="Video"></section> 
+<section id="Video" class="section"></section>
     <fieldset>
         <legend><h2>Video</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -394,7 +360,7 @@
         </div>
     </fieldset>
 
-<section id="Audio"></section> 
+<section id="Audio" class="section"></section>
     <fieldset>
         <legend><h2>Audio</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -420,7 +386,7 @@
         </div>
     </fieldset>
 
-<section id="Image"></section> 
+<section id="Image" class="section"></section>
     <fieldset>
         <legend><h2>Image</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -446,7 +412,7 @@
         </div>
     </fieldset>
 
-<section id="Tool"></section> 
+<section id="Tool" class="section"></section>
     <fieldset>
         <legend><h2>Tool</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -472,7 +438,7 @@
         </div>
     </fieldset>
 
-<section id="Tutorial"></section> 
+<section id="Tutorial" class="section"></section>
     <fieldset>
         <legend><h2>Tutorial</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -498,7 +464,7 @@
         </div>
     </fieldset>
 
-<section id="Web Element"></section> 
+<section id="Web Element" class="section"></section>
     <fieldset>
         <legend><h2>Web Element</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
@@ -524,7 +490,7 @@
         </div>
     </fieldset>
 
-<section id="Ai"></section> 
+<section id="Ai" class="section"></section>
     <fieldset>
         <legend><h2>Ai</h2></legend>
         <div class="buttons-container" id="buttonsContainer">
