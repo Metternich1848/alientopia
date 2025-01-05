@@ -116,38 +116,9 @@
         .section { scroll-margin-top: 150px; /* Adjust based on the header height */ }
         /* Responsive styles */
         @media (max-width: 768px) {
-                .header {
-                    flex-direction: column;
-                    align-items: center;
+                .header, .nav {
+                    display: none; /* Hide the header and nav on smaller screens */
                 }
-                .header div {
-                    margin: 10px 0; /* Vertical margin for smaller screens */
-                }
-                .time {
-                    font-size: 1.2em; /* Reduce size on smaller screens */
-                }
-                .buttons-container {
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .button-row {
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-                .button-row button {
-                    font-size: 0.9em; /* Reduce text size on smaller screens */
-                    padding: 20px; /* Reduce padding on smaller screens */
-                    margin: 10px; /* Increase margin on smaller screens */
-                }
-                .color-button .text-content { 
-                    display: block; 
-                    width: 100%; 
-                    white-space: nowrap; 
-                    overflow: hidden; 
-                    text-overflow: ellipsis; 
-                    font-size: 0.9em; /* Initial font size */ }
-                .color-button .text-content.long-text { font-size: 1em; /* Reduce font size if text is too long */ }
             }
                 </style>
 </head>
