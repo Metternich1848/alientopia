@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engtopia</title>
+    <link rel="icon" type="image/png" href="English/Logo_colour_trans.png">
+    <style>
+        /* Basic styles for layout and responsiveness */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: url('https://images4.alphacoders.com/135/1355525.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        h2 {
+            color: rgb(252, 250, 250);  /* Change text color to white for better readability */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            background: #081F4A;
+            position: -webkit-sticky; /* For Safari */ 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+
+        .header div { margin: 0 10px; /* Add horizontal margin between each div */}
+
+        .header a img { margin: 5px; /* Add margin between elements */ }
+
+        .nav {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 10px;
+                background: #1c4692;
+                position: -webkit-sticky; /* For Safari */ 
+                position: sticky; 
+                top: 0; 
+                z-index: 1000; 
+            }
+    
+        .nav-link { text-decoration: none; }
+
+        .nav { list-style-type: none; /* Remove list bullets */ 
+                padding-left: 5; /* Remove default left padding */ }
+    
+        .logo {
+            width: 100px;
+        }
+        .time {
+            font-size: 2em; /* Double the size */
+            color: rgb(225, 168, 11); /* Change time text color to black */
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center; /* Ensure vertical alignment */
+        }
+        .button-row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background: transparent; /* Set background to transparent */
+            position: -webkit-sticky; /* For Safari */ 
+            position: sticky; 
+            bottom: 0;
+        }
+        .footer img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .color-button {
+            width: 135px; /* Reduced width for buttons (quarter of original 290px) */
+            height: 50px; /* Reduced height for buttons (quarter of original 150px) */
+            margin: 5px; 
+            padding: 10px; /* Adjust padding to fit text */ 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            font-size: 0.75em; /* Adjust text size (quarter of original 1.5em) */ 
+            color: white; 
+            font-family: Times New Roman, sans-serif; 
+            background-color: #FF0000;
+            text-align: center; 
+            white-space: normal; /* Allow text to wrap */ 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+            display: flex; 
+            justify-content: center; /* Center horizontally */ 
+            align-items:center; /* Center vertically */ 
+        }
+        .color-button:hover {
+            opacity: 0.7;
+            color: white;
+        }
+        .section { scroll-margin-top: 150px; /* Adjust based on the header height */ }
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header, .nav {
+        display: none; /* Hide header and nav on smaller screens */
+    }
+    .time {
+        font-size: 1.2em; /* Reduce size on smaller screens */
+    }
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-row button {
+        font-size: 0.9em; /* Reduce text size on smaller screens */
+        padding: 20px; /* Reduce padding on smaller screens */
+        margin: 10px; /* Increase margin on smaller screens */
+    }
+    .color-button .text-content { 
+        display: block; 
+        width: 100%; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        font-size: 0.3em; /* Initial font size */ 
+    }
+    .color-button .text-content.long-text { 
+        font-size: 0.3em; /* Reduce font size if text is too long */ 
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="header" style="height: 45px; position: sticky; top: 0; z-index: 1000;">
+        <div class="logo">
+            <a href="https://metternich1848.github.io/alientopia/"><img id="randomLogo" src="English/Logo_colour_trans.png" 
+                width="50" height="50" alt="Logo"></a>
+        </div>
+
+        <div>
+            <a href="https://www.writecream.com/descriptive-writing-examples-generator/?form=MG0AV3" target="_blank"><img src="English/WriteCream Logo.png" width="40" height="40" alt="Video Express Ai"></a>
+            <a href="https://www.writefull.com/" target="_blank"><img src="English/Writefull Logo.png" width="40" height="40" alt="Talking Photos Ai"></a>
+            <a href="https://www.thesaurus.com/" target="_blank"><img src="English/Thesaurus Logo.png" width="40" height="40" alt="HumanBot"></a>
+            <a href="https://app.grammarly.com/" target="_blank"><img src="English/Grammarly Logo.png" width="40" height="40" alt="Doodle Maker"></a>
+            <a href="https://app.wordtune.com/" target="_blank"><img src="English/Wordtune Logo.png" width="40" height="40" alt="Doodle Maker"></a>
+            <a href="https://quillbot.com/paraphrasing-tool" target="_blank"><img src="English/QuillBot Logo.png" width="40" height="40" alt="PicWish"></a>
+            <a href="https://translate.google.com/" target="_blank"><img src="English/Google Translate Logo.png" width="40" height="40" alt="Canva"></a>
+            <a href="https://hk.dictionary.search.yahoo.com/" target="_blank"><img src="English/Dictionary.png" width="40" height="40" alt="Elfsight"></a>
+            <a href="https://dictionary.cambridge.org/" target="_blank"><img src="English/Cambridge Logo.png" width="40" height="40" alt="Dictionary"></a>
+            <a href="https://hotmail.com/" target="_blank"><img src="English/Microsoft Logo.png" width="40" height="40" alt="Hotmail"></a>
+            <a href="https://gmail.com/" target="_blank"><img src="English/Gmail Logo.png" style ="padding: 0px 0px 5px 0px;" width="30" height="30" alt="Gmail"></a>
+            <a href="https://login.yahoo.com/" target="_blank"><img src="English/Yahoo Logo.png" width="40" height="40" alt="Yahoo"></a>
+            <a href="https://www.hkpl.gov.hk/tc/index.html" target="_blank"><img src="English/HK Library.png" width="40" height="40" alt="Library"></a>
+            <a href="https://www.netflix.com/" target="_blank"><img src="English/Netflix Logo.png" width="40" height="40" alt="Netflix"></a>
+            <a href="https://world.taobao.com/" target="_blank"><img src="English/TaoBao Logo.png" width="40" height="40" alt="TaoBao"></a>        
+        </div>
+        <div class="time" id="currentTime"></div>
+    </div>
+
+    <div class="nav" style="height: 50px; padding: 0px 0; line-height:0; position: sticky; top: 40px; z-index: 999;">
+        <ul class="nav" style="display: flex; gap: 15px;">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Web Hosting" style="color:red;font-size: 1.3rem;">Web Hosting</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Web Builder" style="color:orange;font-size: 1.3rem;">Web Builder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Template" style="color:yellow;font-size: 1.3rem;">Template</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Icon" style="color:lime;font-size: 1.3rem;">Icon</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#Font" style="color:aqua;font-size: 1.3rem;">Font</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="#Video" style="color:Fuchsia;font-size: 1.3rem;">Video</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Audio" style="color:Violet;font-size: 1.3rem;">Audio</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Image" style="color:red;font-size: 1.3rem;">Image</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Tool" style="color:orange;font-size: 1.3rem;">Tool</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Tutorial" style="color:yellow;font-size: 1.3rem;">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Web Element" style="color:lime;font-size: 1.3rem;">Web Element</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#Ai" style="color:aqua;font-size: 1.3rem;">Ai</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="Web Hosting" class="section"></section>	
+    <fieldset>
+        <legend><h2 style="color:red">Web Hosting</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://www.hostinger.com/" class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Hostinger</button>
+                <button data-url="https://github.com/"  class="color-button" style="background-color:red ; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;"  
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">GitHub</button>
+                <button data-url="https://www.infinityfree.com/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Infinity Free</button>
+                <button data-url="https://tiiny.host/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">tiiny</button>
+                <button data-url="https://www.awardspace.com/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;"  
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Award Space</button>
+                <button data-url="https://googiehost.com/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Googie Host</button>
+                <button data-url="https://profreehost.com/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.5em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Pro Free Host</button>
+                <button data-url="https://www.squarespace.com/" class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;border: 2px solid red;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Square Space</button>
+            </div>
+        </div>
+     </fieldset>
+
+     <section id="Web Builder" class="section"></section>
+     <fieldset style="width: 50%;">
+        <legend><h2 style="color:orange">Web Builder</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://carrd.co/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;border: 2px solid orange;"
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Carrd</button>
+                <button data-url="https://www.framer.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Framer</button>
+                <button data-url="https://mobirise.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Mobirise</button>
+                <button data-url="https://www.odoo.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Odoo</button>
+                <button data-url="https://www.renderforest.com/website-hosting"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Render Forest</button>
+                <button data-url="https://www.silex.me/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Silex</button>
+                <button data-url="https://www.site123.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Site 123</button>
+                <button data-url="https://soloist.ai/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Soloist</button>
+            </div>
+            <div class="button-row">
+                <button data-url="https://tw.strikingly.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Strikingly</button>
+                <button data-url="https://tips.io/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Tips.io</button>
+                <button data-url="https://webflow.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Webflow</button>
+                <button data-url="https://www.webnode.com/zh/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Webnode</button>
+                <button data-url="https://webstudio.is/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Webstudio</button>
+                <button data-url="https://www.webydo.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Webydo</button>
+                <button data-url="https://www.weebly.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Weebly</button>
+                <button data-url="https://www.wix.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.7em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Wix</button>
+            </div>
+        </div>
+     </fieldset>
+
+<section id="Template" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:yellow">Template</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://codepen.io/" class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Codepen</button>
+                <button data-url="https://www.dedemao.com/index.html"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Dedemao</button>
+                <button data-url="https://io3000.com/"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 1.9em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">io3000</button>
+                <button data-url="https://www.w3schools.com/w3css/w3css_templates.asp "  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 1.8em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">W3Schools</button>
+                <button data-url="https://www.tooplate.com/" class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Tooplate</button>
+                <button data-url="https://www.toocss.com/free-responsive-html-css-templates/"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">TooCSS</button>
+                <button data-url="https://www.free-css.com/template-categories/responsive"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Free CSS</button>
+                <button data-url="https://colorlib.com/wp/free-responsive-website-templates/"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">ColorLib</button>
+                </div>
+        </div>
+     </fieldset>
+
+<section id="Icon" class="section"></section>
+     <fieldset>
+        <legend><h2 style="color:lime">Icon</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://www.drawkit.com/product/3d-social-media-icons" class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">DrawKit</button>
+                <button data-url="https://www.flaticon.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Flaticon</button>
+                <button data-url="https://fontawesome.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Fontawesome Icon</button>
+                <button data-url="https://www.iconarchive.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Icon Archive</button>
+                <button data-url="https://realfavicongenerator.net/" class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 1.6em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Icon Generator</button>
+                <button data-url="https://icons8.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Icons8</button>
+                <button data-url="https://iconscout.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Iconscout</button>
+                <button data-url="https://www.designevo.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Logo Design</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Font" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:aqua">Font</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://fonts.google.com/" class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Google Fonts</button>
+                <button data-url="https://www.1001fonts.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">1001 Fonts</button>
+                <button data-url="https://www.fontspace.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 1.9em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Font Space</button>
+                <button data-url="https://www.fonts.net.cn/fonts-zh/tag-rixi-1.html"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Chinese Fonts</button>
+                <button data-url="https://www.tutorialbrain.com/css_tutorial/css_font_family_list/" class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 1.4em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">CSS Font Family</button>
+                <button data-url="https://www.oxxostudio.tw/articles/201811/css-font-family.html "  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Font Usage</button>
+                <button data-url="https://www.puritys.me/docs-blog/article-60-%E7%B6%B2%E9%A0%81%E5%8F%AF%E7%94%A8%E5%AD%97%E5%9E%8B-font-family.html"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Web Font</button>
+                <button data-url="https://www.toolskk.com/garbled-text-recover"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Garbled Code</button>
+                </div>
+        </div>
+    </fieldset>
+
+<section id="Video" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:Fuchsia">Video</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://www.animaker.com/" class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Animaker</button>
+                <button data-url="https://animoto.com/"  class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Animoto</button>
+                <button data-url="https://clideo.com/"  class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Clideo</button>
+                <button data-url="https://www.moovly.com/"  class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Moovly</button>
+                <button data-url="https://www.powtoon.com/" class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Powtoon</button>
+                <button data-url="https://www.renderforest.com/"  class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 1.6em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Renderforest</button>
+                <button data-url="https://www.videoscribe.co/"  class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 1.7em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Videoscribe</button>
+                <button data-url="https://www.vyond.com/"  class="color-button" style="background-color: Fuchsia; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Vyond</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Audio" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:violet">Audio</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://pixabay.com/sound-effects/" class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Pixabay</button>
+                <button data-url="https://sound-effects.bbcrewind.co.uk/"  class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">BBC Sound Effects</button>
+                <button data-url="https://www.jamendo.com/"  class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Jamendo</button>
+                <button data-url="https://orangefreesounds.com/"  class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Orange Free Sounds</button>
+                <button data-url="https://quicksounds.com/" class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Quick Sounds</button>
+                <button data-url="https://clideo.com/cut-audio"  class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Cut Audio</button>
+                <button data-url="https://mp3cut.net/"  class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">MP3 Cut</button>
+                <button data-url="https://www.flexclip.com/tw/"  class="color-button" style="background-color: Violet; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Flexclip</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Image" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:red">Image</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://www.11zon.com/" class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">11zon</button>
+                <button data-url="https://cleanup.pictures/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">CleanUp Pictures</button>
+                <button data-url="https://clipdrop.co/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">ClipDrop</button>
+                <button data-url="https://www.iloveimg.com/zh-tw"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">iloveimg </button>
+                <button data-url="https://www.adobe.com/tw/express/feature/image/resize" class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Image Resize</button>
+                <button data-url="https://cdn.peko-step.com/zhtw/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Peko</button>
+                <button data-url="https://www.remove.bg/zh"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Remove BG</button>
+                <button data-url="https://webresizer.com/"  class="color-button" style="background-color: red; padding: 40px; border-radius: 5px; font-size: 2em; color: white; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Web Resizer</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Tool" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:orange">Tool</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://www.bestcssbuttongenerator.com/" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Button Generator</button>
+                <button data-url="https://cloudconvert.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Cloud Convert</button>
+                <button data-url="https://convertio.co/zh/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Convertio</button>
+                <button data-url="https://creator.lottiefiles.com/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Lottie Creator</button>
+                <button data-url="https://iconscout.com/converter/lottie-to-gif" class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Lottie to GIF</button>
+                <button data-url="https://www.anyrec.io/zh_tw/screen-recorder/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Screen Recorder</button>
+                <button data-url="https://www.anyrec.io/zh_tw/video-converter/"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Video Converter</button>
+                <button data-url="https://wordart.com/create"  class="color-button" style="background-color: #FFA500; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Word Art</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Tutorial" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:yellow">Tutorial</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://htmlcolorcodes.com/" class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Html Color Codes</button>
+                <button data-url="https://blog.csdn.net/ProgramChangesWorld/article/details/51702679"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Circular Photo</button>
+                <button data-url="https://www.fotor.com/tw/features/frames.html"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Fotor Frames</button>
+                <button data-url="https://www.astralweb.com.tw/full-screen-backround-image/"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Full Screen</button>
+                <button data-url="https://ithelp.ithome.com.tw/articles/10291942?sc=iThelpR" class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 1.8em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Photo Corner</button>
+                <button data-url="https://www.runoob.com/"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Runoob</button>
+                <button data-url="https://www.tableau.com/learn/training"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Tableau Training</button>
+                <button data-url="https://diary.showhappy.net/?id=41399&page=1"  class="color-button" style="background-color: yellow; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Diary</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Web Element" class="section"></section>
+    <fieldset>
+        <legend><h2 style="color:lime">Web Element</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://www.cleanpng.com/" class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Clean PNG</button>
+                <button data-url="https://www.hiclipart.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Hiclipart</button>
+                <button data-url="https://www.pngegg.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">PNGegg</button>
+                <button data-url="https://www.stickpng.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Stickpng</button>
+                <button data-url="https://www.cgtrader.com/" class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">CG Trader</button>
+                <button data-url="https://free3d.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Free 3D </button>
+                <button data-url="https://sketchfab.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Sketchfab</button>
+                <button data-url="https://wallpaperaccess.com/"  class="color-button" style="background-color: lime; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Wallpaper</button>
+            </div>
+        </div>
+    </fieldset>
+
+<section id="Ai" class="section"></section>
+    <fieldset style="width: 50%;">
+        <legend><h2 style="color:aqua">Ai</h2></legend>
+        <div class="buttons-container" id="buttonsContainer">
+            <!-- Buttons will be generated by JavaScript -->
+            <div class="button-row">
+                <button data-url="https://elevenlabs.io/" class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 1.8em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Elevenlabs</button>
+                <button data-url="https://fliki.ai/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Fliki</button>
+                <button data-url="https://www.heygen.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">HeyGen</button>
+                <button data-url="https://invideo.io/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Invideo</button>
+                <button data-url="https://kaiber.ai/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Kaiber</button>
+                <button data-url="https://leonardo.ai/" class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Leonardo</button>
+                <button data-url="https://designer.microsoft.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Microsoft Designer</button>
+                <button data-url="https://storyteller.mootion.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Mootion</button>
+            </div>
+            <div class="button-row">
+                <button data-url="https://picsart.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Picsart</button>
+                <button data-url="https://pictory.ai/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Pictory</button>
+                <button data-url="https://playground.com/" class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 1.8em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Playground</button>
+                <button data-url="https://www.shakker.ai/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Shakker</button>
+                <button data-url="https://stablediffusionweb.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 1.5em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Stable Difffusion</button>
+                <button data-url="https://starryai.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Starryai</button>
+                <button data-url="https://tensor.art/" class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Tensor Art</button>
+                <button data-url="https://ttsmaker.com/"  class="color-button" style="background-color: aqua; padding: 40px; border-radius: 5px; font-size: 2em; color: black; font-family: Times New Roman, sans-serif;" 
+                        onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'">Ttsmaker</button>
+            </div>
+        </div>
+    </fieldset>
+
+    <!--<div>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-64ddf399-7f9d-44a6-8906-4a325ef0cf10" data-elfsight-app-lazy></div>
+    </div>-->
+    <div class="footer">
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-3eb57675-3854-48fc-8abc-b8795b3c52be" data-elfsight-app-lazy></div>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-64ddf399-7f9d-44a6-8906-4a325ef0cf10" data-elfsight-app-lazy></div>
+    </div>
+
+    <script>
+        // Display current time and date in specified format
+        function updateTime() {
+            const currentTime = document.getElementById('currentTime');
+            const now = new Date();
+            const options = { day: 'numeric', month: 'short', year: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-GB', options).replace(',', '');
+            const formattedTime = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+            const weekday = now.toLocaleDateString('en-GB', { weekday: 'short' });
+            currentTime.innerHTML = `${formattedDate} (${weekday}) ${formattedTime}`;
+        }
+        setInterval(updateTime, 1000);
+
+        // Set onclick event for buttons to open respective YouTube links
+        document.querySelectorAll('.button-row button').forEach(btn => {
+            btn.onclick = () => window.open(btn.getAttribute('data-url'), '_blank');
+        });
+    </script>
+</body>
+</html>
