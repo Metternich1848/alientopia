@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sense & Sensibility Series</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        /* 設置背景圖片 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Selfie with Totoro/Totoro.png'); /* 替換為實際背景圖片路徑 */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* 文字與標題字體風格 */
+        h3 {
+            font-family: 'Comic Sans MS', cursive;
+            color: #d022e0;
+            font-size: 40px;
+        }
+
+        p {
+            font-family: 'Comic Sans MS', cursive;
+            color: #130ff1;
+            font-size: 22px;
+            text-align: justify;
+            word-wrap: break-word; /* 防止單詞太長溢出 */
+            overflow-wrap: break-word; /* 在行尾自動換行 */
+            max-width: 100%; /* 保證內容不超出螢幕寬度 */
+        }
+
+        /* 左側圖片（第三段文字前） */
+        .left-image {
+            float: left;
+            margin: 10px 15px 10px 0;
+            border-radius: 15px;
+            /*max-width: 200px;*/
+            height: auto;
+        }
+
+        /* 右側圖片（第一段文字後） */
+        .right-image {
+            float: right;
+            margin: 10px 0 10px 15px;
+            border-radius: 15px;
+            /*max-width: 200px;*/
+            height: auto;
+        }
+
+        #container {
+            width: 50%; /* 預留左右各四分之一的空白 */
+            margin: 0 auto; /* 居中 */
+        }
+
+        .left-image, .right-image {
+            width: 400px; /* 將寬度設為目標尺寸 */
+            height: 300px; /* 可指定高度，或保持比例 */
+            object-fit: cover; /* 保持填充效果 */
+            display: block; /* 確保正確顯示 */
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .left-image, .right-image {
+                float: none;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h3>Selfie with Totoro</h3>
+    
+    <!-- 第一段文字內容與右側圖片 -->
+    <p>
+        Famous for its diverse collection of intricately crafted figurines and collectible models from popular movies and animations around the globe, <b><i>Figure Museum Jeju</i></b> is considered an unmissable destination for anime enthusiasts on Jeju Island. Comics aficionados will be thrilled by themed displays featuring meticulously detailed life-sized statues, offering perfect selfie opportunities with Marvel superheroes, Star Wars Stormtroopers, Disney cartoon characters, and Japanese anime figures.
+        <img src="Selfie with Totoro/Glass Cabinet.jpg" alt="右側圖片" class="right-image">
+    </p>
+
+    <!-- 第二段文字 -->
+    <p>
+        Although the high-quality models in the museum were stunning, what truly left a lasting impression on me was not the precious exhibits but a small incident involving a young couple. At the Totoro display area, a young lady enthusiastically asked her boyfriend to take a photo of her with her beloved character as a keepsake. However, the boyfriend explained that since Totoro was placed in a glass cabinet, the resulting photos would have undesirable glare from reflections, so he refused her request. Disappointed, the couple soon walked away. Yet, not long after, the young lady quietly returned alone, struggling to capture a satisfactory selfie with her adored figure. Unfortunately, her attempts did not yield the desired result. Touched by her persistence, I stepped forward and offered to take the photo for her. Her grateful smile as I took the photo became the highlight of my visit.
+    </p>
+
+    <!-- 第三段文字內容與左側圖片 -->
+    <p>
+        <img src="Selfie with Totoro/House.jpg" alt="左側圖片" class="left-image">
+        The boyfriend’s practical refusal to take the photo due to potential glare initially seemed reasonable, yet it unintentionally dismissed his partner's simple desire to preserve a joyful memory. The young lady wished to capture a cherished moment with her beloved Totoro, valuing the sentimental experience far more than the photo’s technical perfection. Sadly, the boyfriend prioritized logic over emotional sensitivity, overlooking his girlfriend's feelings. This couple’s story highlights the importance of balancing practicality with empathy in relationships. True connections thrive not only on reason but also on the willingness to prioritize each other's emotional needs, even in seemingly trivial situations.
+    </p>
+</div>
+<script src="jquery-3.6.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+</body>
+</html>
