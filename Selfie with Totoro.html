@@ -68,16 +68,24 @@
     
         /* 響應式設計 */
         @media (max-width: 768px) {
-            #container {
-                width: 75%; /* 改為 75% 寬度，減少兩側空白 */
-                margin: 0 auto; /* 保持居中 */
-            }
-            .left-image, .right-image {
-                float: none;
-                display: block;
-                margin: 10px auto;
-            }
-        }
+    #container {
+        width: 75%; /* 縮減左右空白，讓每行顯示更多文字 */
+        margin: 0 auto; /* 保持居中 */
+    }
+
+    h3 {
+        font-size: 32px; /* 略縮小標題字體 */
+    }
+
+    p {
+        font-size: 20px; /* 略縮小段落文字字體 */
+    }
+
+    .left-image, .right-image {
+        width: 450px; /* 調整圖片大小以適應橫向顯示 */
+        height: auto; /* 保持比例 */
+    }
+}
 
         @media (max-width: 480px) {
             #container {
