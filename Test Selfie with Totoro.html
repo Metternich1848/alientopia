@@ -130,6 +130,37 @@
 }
 
 
+/* 針對六吋手機的橫向模式 */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        font-size: 18px; /* 字體稍大 */
+        line-height: 1.6; /* 增強橫向模式的閱讀舒適度 */
+        margin: 0; /* 同樣移除全局邊距 */
+    }
+
+    #container {
+        width: 150%; /* 減少左右空白以顯示更多文字 */
+        margin: 0 auto; /* 保持內容居中 */
+        padding: 10px; /* 增加內邊距讓內容更清晰 */
+    }
+
+    h3 {
+        font-size: 28px; /* 增大標題字體 */
+        text-align: left; /* 在橫向模式下標題靠左對齊 */
+    }
+
+    p {
+        font-size: 16px; /* 段落文字適度放大 */
+        text-align: justify; /* 文字兩端對齊 */
+    }
+
+    .left-image, .right-image {
+        width: 50%; /* 圖片保持適中尺寸 */
+        height: auto; /* 保持比例 */
+        margin: 10px auto; /* 圖片上下居中顯示 */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -152,7 +183,7 @@
     
     <!-- 第一段文字內容與右側圖片 -->
     <p>
-        ABcd Famous for its diverse collection of intricately crafted figurines and collectible models from popular movies and animations around the globe, <b><i>Figure Museum Jeju</i></b> is considered an unmissable destination for anime enthusiasts on Jeju Island. Comics aficionados will be thrilled by themed displays featuring meticulously detailed life-sized statues, offering perfect selfie opportunities with Marvel superheroes, Star Wars Stormtroopers, Disney cartoon characters, and Japanese anime figures.
+        Famous for its diverse collection of intricately crafted figurines and collectible models from popular movies and animations around the globe, <b><i>Figure Museum Jeju</i></b> is considered an unmissable destination for anime enthusiasts on Jeju Island. Comics aficionados will be thrilled by themed displays featuring meticulously detailed life-sized statues, offering perfect selfie opportunities with Marvel superheroes, Star Wars Stormtroopers, Disney cartoon characters, and Japanese anime figures.
         <img src="Selfie with Totoro/Glass Cabinet.jpg" alt="右側圖片" class="right-image">
     </p>
 
