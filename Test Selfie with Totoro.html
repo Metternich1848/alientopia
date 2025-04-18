@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sense & Sensibility Series</title>
+    <link rel="icon" type="image/png" href="Selfie with Totoro/Logo_Sense and Sensibility.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        /* 設置背景圖片 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Selfie with Totoro/Totoro.png'); /* 替換為實際背景圖片路徑 */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* 文字與標題字體風格 */
+        h3 {
+            font-family: 'Comic Sans MS', cursive;
+            color: #d022e0;
+            font-size: 40px;
+        }
+
+        p {
+            font-family: 'Comic Sans MS', cursive;
+            color: #130ff1;
+            font-size: 22px;
+            text-align: justify;
+            word-wrap: break-word; /* 防止單詞太長溢出 */
+            overflow-wrap: break-word; /* 在行尾自動換行 */
+            max-width: 100%; /* 保證內容不超出螢幕寬度 */
+        }
+
+        /* 左側圖片（第三段文字前） */
+        .left-image {
+            float: left;
+            margin: 10px 15px 10px 0;
+            border-radius: 15px;
+            /*max-width: 200px;*/
+            height: auto;
+        }
+
+        /* 右側圖片（第一段文字後） */
+        .right-image {
+            float: right;
+            margin: 10px 0 10px 15px;
+            border-radius: 15px;
+            /*max-width: 200px;*/
+            height: auto;
+        }
+
+        #container {
+            width: 50%; /* 預留左右各四分之一的空白 */
+            margin: 0 auto; /* 居中 */
+        }
+
+        .left-image, .right-image {
+            width: 400px; /* 將寬度設為目標尺寸 */
+            height: 300px; /* 可指定高度，或保持比例 */
+            object-fit: cover; /* 保持填充效果 */
+            display: block; /* 確保正確顯示 */
+        }
+    
+        /* 響應式設計 */
+
+        @media (min-width: 481px) and (max-width: 768px) {
+    #container {
+        width: 85%; /* 縮減左右空白，讓每行顯示更多文字 */
+        margin: 0 auto; /* 保持居中 */
+    }
+
+    h3 {
+        font-size: 32px; /* 略縮小標題字體 */
+    }
+
+    p {
+        font-size: 20px; /* 略縮小段落文字字體 */
+    }
+
+    .left-image, .right-image {
+        width: 450px; /* 調整圖片大小以適應橫向顯示 */
+        height: auto; /* 保持比例 */
+    }
+}
+
+        @media (max-width: 768px) {
+    #container {
+        width: 85%; /* 縮減左右空白，讓每行顯示更多文字 */
+        margin: 0 auto; /* 保持居中 */
+    }
+
+    h3 {
+        font-size: 32px; /* 略縮小標題字體 */
+    }
+
+    p {
+        font-size: 20px; /* 略縮小段落文字字體 */
+    }
+
+    .left-image, .right-image {
+        width: 450px; /* 調整圖片大小以適應橫向顯示 */
+        height: auto; /* 保持比例 */
+    }
+}
+
+        @media (max-width: 480px) {
+            #container {
+                width: 95%; /* 改為 95% 寬度，減少兩側空白 */
+                margin: 0 auto; /* 保持居中 */
+            }
+
+            h3 {
+                font-size: 30px; /* 標題字體縮小 */
+            }
+
+            p {
+                font-size: 18px; /* 段落文字縮小 */
+            }
+
+            .left-image, .right-image {
+                width: 400px; /* 圖片也可適當縮小 */
+                height: auto; /* 保持比例 */
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h3 style="display: flex; align-items: center; gap: 10px;">
+        <!-- 前方圖示 -->
+        <a href="https://metternich1848.github.io/alientopia/" target="_blank" style="text-decoration: none;">
+            <img src="img/Logo_colour_trans.png" alt="前方圖示" style="width: 80px; height: 80px; margin-right: 0px;">
+        </a>
+        
+        Selfie with Totoro
+
+        <!-- 後方圖示 -->
+        <a href="https://www.youtube.com/shorts/ocr5lZ1yM-w" target="_blank" style="text-decoration: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+                <linearGradient id="PgB_UHa29h0TpFV_moJI9a_9a46bTk3awwI_gr1" x1="9.816" x2="41.246" y1="9.871" y2="41.301" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f44f5a"></stop><stop offset=".443" stop-color="#ee3d4a"></stop><stop offset="1" stop-color="#e52030"></stop></linearGradient><path fill="url(#PgB_UHa29h0TpFV_moJI9a_9a46bTk3awwI_gr1)" d="M45.012,34.56c-0.439,2.24-2.304,3.947-4.608,4.267C36.783,39.36,30.748,40,23.945,40	c-6.693,0-12.728-0.64-16.459-1.173c-2.304-0.32-4.17-2.027-4.608-4.267C2.439,32.107,2,28.48,2,24s0.439-8.107,0.878-10.56	c0.439-2.24,2.304-3.947,4.608-4.267C11.107,8.64,17.142,8,23.945,8s12.728,0.64,16.459,1.173c2.304,0.32,4.17,2.027,4.608,4.267	C45.451,15.893,46,19.52,46,24C45.89,28.48,45.451,32.107,45.012,34.56z"></path><path d="M32.352,22.44l-11.436-7.624c-0.577-0.385-1.314-0.421-1.925-0.093C18.38,15.05,18,15.683,18,16.376	v15.248c0,0.693,0.38,1.327,0.991,1.654c0.278,0.149,0.581,0.222,0.884,0.222c0.364,0,0.726-0.106,1.04-0.315l11.436-7.624	c0.523-0.349,0.835-0.932,0.835-1.56C33.187,23.372,32.874,22.789,32.352,22.44z" opacity=".05"></path><path d="M20.681,15.237l10.79,7.194c0.689,0.495,1.153,0.938,1.153,1.513c0,0.575-0.224,0.976-0.715,1.334	c-0.371,0.27-11.045,7.364-11.045,7.364c-0.901,0.604-2.364,0.476-2.364-1.499V16.744C18.5,14.739,20.084,14.839,20.681,15.237z" opacity=".07"></path><path fill="#fff" d="M19,31.568V16.433c0-0.743,0.828-1.187,1.447-0.774l11.352,7.568c0.553,0.368,0.553,1.18,0,1.549	l-11.352,7.568C19.828,32.755,19,32.312,19,31.568z"></path>
+                </svg>
+        </a>
+    </h3>
+    
+    <!-- 第一段文字內容與右側圖片 -->
+    <p>
+        Famous for its diverse collection of intricately crafted figurines and collectible models from popular movies and animations around the globe, <b><i>Figure Museum Jeju</i></b> is considered an unmissable destination for anime enthusiasts on Jeju Island. Comics aficionados will be thrilled by themed displays featuring meticulously detailed life-sized statues, offering perfect selfie opportunities with Marvel superheroes, Star Wars Stormtroopers, Disney cartoon characters, and Japanese anime figures.
+        <img src="Selfie with Totoro/Glass Cabinet.jpg" alt="右側圖片" class="right-image">
+    </p>
+
+    <!-- 第二段文字 -->
+    <p>
+        Although the high-quality models in the museum were stunning, what truly left a lasting impression on me was not the precious exhibits but a small incident involving a young couple. At the Totoro display area, a young lady enthusiastically asked her boyfriend to take a photo of her with her beloved character as a keepsake. However, the boyfriend explained that since Totoro was placed in a glass cabinet, the resulting photos would have undesirable glare from reflections, so he refused her request. Disappointed, the couple soon walked away. Yet, not long after, the young lady quietly returned alone, struggling to capture a satisfactory selfie with her adored figure. Unfortunately, her attempts did not yield the desired result. Touched by her persistence, I stepped forward and offered to take the photo for her. Her grateful smile as I took the photo became the highlight of my visit.
+    </p>
+
+    <!-- 第三段文字內容與左側圖片 -->
+    <p>
+        <img src="Selfie with Totoro/House.jpg" alt="左側圖片" class="left-image">
+        The boyfriend’s practical refusal to take the photo due to potential glare initially seemed reasonable, yet it unintentionally dismissed his partner's simple desire to preserve a joyful memory. The young lady wished to capture a cherished moment with her beloved Totoro, valuing the sentimental experience far more than the photo’s technical perfection. Sadly, the boyfriend prioritized logic over emotional sensitivity, overlooking his girlfriend's feelings. This couple’s story highlights the importance of balancing practicality with empathy in relationships. True connections thrive not only on reason but also on the willingness to prioritize each other's emotional needs, even in seemingly trivial situations.
+    </p>
+    <a href="https://www.youtube.com/shorts/ocr5lZ1yM-w">
+        <button style="width: auto; padding: 15px; background-color: #130ff1; color: white; border: none; border-radius: 5px; cursor: pointer; font-family: 'Comic Sans MS', cursive; font-size: 24px;">
+            Click here to watch the video
+        </button>
+      </a>
+</div>
+<script src="jquery-3.6.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+</body>
+</html>
+
