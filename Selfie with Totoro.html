@@ -67,7 +67,7 @@
         }
     
         /* 響應式設計 */
-        @media (min-width: 481px) and (max-width: 768px) {
+        @media (max-width: 768px) {
     #container {
         width: 85%; /* 縮減左右空白，讓每行顯示更多文字 */
         margin: 0 auto; /* 保持居中 */
@@ -86,6 +86,26 @@
         height: auto; /* 保持比例 */
     }
 }
+
+        @media (max-width: 480px) {
+            #container {
+                width: 95%; /* 改為 95% 寬度，減少兩側空白 */
+                margin: 0 auto; /* 保持居中 */
+            }
+
+            h3 {
+                font-size: 30px; /* 標題字體縮小 */
+            }
+
+            p {
+                font-size: 18px; /* 段落文字縮小 */
+            }
+
+            .left-image, .right-image {
+                width: 400px; /* 圖片也可適當縮小 */
+                height: auto; /* 保持比例 */
+            }
+        }
     </style>
 </head>
 <body>
