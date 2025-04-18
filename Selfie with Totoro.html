@@ -68,6 +68,10 @@
     
         /* 響應式設計 */
         @media (max-width: 768px) {
+            #container {
+                width: 75%; /* 改為 75% 寬度，減少兩側空白 */
+                margin: 0 auto; /* 保持居中 */
+            }
             .left-image, .right-image {
                 float: none;
                 display: block;
@@ -77,7 +81,7 @@
 
         @media (max-width: 480px) {
             #container {
-                width: 95%; /* 改為 90% 寬度，減少兩側空白 */
+                width: 95%; /* 改為 95% 寬度，減少兩側空白 */
                 margin: 0 auto; /* 保持居中 */
             }
 
