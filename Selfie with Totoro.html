@@ -67,45 +67,67 @@
         }
     
         /* 響應式設計 */
-        @media (max-width: 768px) {
+/* 針對六吋手機的直向模式 */
+@media (max-width: 480px) and (orientation: portrait) {
+    body {
+        font-size: 16px; /* 字體稍小以容納更多文字 */
+        line-height: 1.5; /* 保證良好閱讀體驗 */
+        margin: 0; /* 移除全局邊距 */
+    }
+
     #container {
-        width: 85%; /* 縮減左右空白，讓每行顯示更多文字 */
-        margin: 0 auto; /* 保持居中 */
+        width: 95%; /* 容器寬度接近螢幕寬度 */
+        margin: 0 auto; /* 保持內容居中 */
+        padding: 5px; /* 保留少量內邊距避免文字緊貼螢幕 */
     }
 
     h3 {
-        font-size: 32px; /* 略縮小標題字體 */
+        font-size: 24px; /* 縮小標題字體 */
+        text-align: center; /* 置中提升視覺效果 */
     }
 
     p {
-        font-size: 20px; /* 略縮小段落文字字體 */
+        font-size: 14px; /* 段落文字縮小 */
+        text-align: justify; /* 讓文字兩端對齊 */
     }
 
     .left-image, .right-image {
-        width: 450px; /* 調整圖片大小以適應橫向顯示 */
+        width: 100%; /* 圖片自適應屏幕寬度 */
         height: auto; /* 保持比例 */
+        margin: 10px auto; /* 圖片上下居中顯示 */
     }
 }
 
-        @media (max-width: 480px) {
-            #container {
-                width: 95%; /* 改為 95% 寬度，減少兩側空白 */
-                margin: 0 auto; /* 保持居中 */
-            }
+/* 針對六吋手機的橫向模式 */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+    body {
+        font-size: 18px; /* 字體稍大 */
+        line-height: 1.6; /* 增強橫向模式的閱讀舒適度 */
+        margin: 0; /* 同樣移除全局邊距 */
+    }
 
-            h3 {
-                font-size: 30px; /* 標題字體縮小 */
-            }
+    #container {
+        width: 90%; /* 減少左右空白以顯示更多文字 */
+        margin: 0 auto; /* 保持內容居中 */
+        padding: 10px; /* 增加內邊距讓內容更清晰 */
+    }
 
-            p {
-                font-size: 18px; /* 段落文字縮小 */
-            }
+    h3 {
+        font-size: 28px; /* 增大標題字體 */
+        text-align: left; /* 在橫向模式下標題靠左對齊 */
+    }
 
-            .left-image, .right-image {
-                width: 400px; /* 圖片也可適當縮小 */
-                height: auto; /* 保持比例 */
-            }
-        }
+    p {
+        font-size: 16px; /* 段落文字適度放大 */
+        text-align: justify; /* 文字兩端對齊 */
+    }
+
+    .left-image, .right-image {
+        width: 50%; /* 圖片保持適中尺寸 */
+        height: auto; /* 保持比例 */
+        margin: 10px auto; /* 圖片上下居中顯示 */
+    }
+}
     </style>
 </head>
 <body>
