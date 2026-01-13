@@ -135,16 +135,14 @@
       font-size: 18px;          /* 字體更大 */
       cursor: pointer;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      transition: background-color 0.3s, border-radius 0.3s; /* 加入形狀過渡 */
-
-
+      transition: background-color 0.3s, border-radius 0.3s, clip-path 0.3s;
     }
 
 
     .back-to-top:hover {
       background-color:green;
-      border-radius: 0;         /* 變成正方形 */
-
+      border-radius: 0;         /* 去掉圓角 */
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* 三角形 */
     }
 
 
@@ -694,12 +692,15 @@
     position: fixed;
     bottom: 0;          /* 固定在底部 */
     width: 90%;        /* 佔滿整個寬度 */
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.5); /* 黑色半透明 */
+    border-radius: 12px;    /* 四角圓角 */
     text-align: center;
     z-index: 1000;
     padding-top: 8px;   /* 讓內容稍微往下置中 */
     box-shadow: 0 -2px 5px rgba(0,0,0,0);
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3); /* 陰影更明顯 */
 ">
+
     <a href="https://pakkiyick.tumblr.com/" target="_blank">
         <img src="Computer/tumblr Logo (2).png" 
              style="width: 70%; height: auto;"
