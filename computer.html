@@ -116,6 +116,31 @@
             color: white;
         }
         .section { scroll-margin-top: 150px; /* Adjust based on the header height */ }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: absolute;       /* 按鈕自己定位 */
+      right: 20px;              /* 靠右 */
+      bottom: 0;                /* 靠底 */
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;       /* 圓形 */
+      border: 2px solid white;  /* 白色邊線 */
+      background-color: brown;
+      color: white;
+      font-family: "Times New Roman", serif;
+      font-size: 18px;          /* 字體更大 */
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+
+
+    .back-to-top:hover {
+      background-color:green;
+    }
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .header, .nav {
@@ -634,13 +659,25 @@
         <div class="elfsight-app-64ddf399-7f9d-44a6-8906-4a325ef0cf10" data-elfsight-app-lazy></div>
     </div>-->
 
-    <!--Back to Top Button-->
+    <!--Elfsight: Back to Top Button-->
     <!--<div class="footer">
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
         <div class="elfsight-app-3eb57675-3854-48fc-8abc-b8795b3c52be" data-elfsight-app-lazy></div>
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
         <div class="elfsight-app-64ddf399-7f9d-44a6-8906-4a325ef0cf10" data-elfsight-app-lazy></div>
     </div>-->
+
+    <!--Back to Top Button-->
+  <div class="footer">
+    <button class="back-to-top" onclick="scrollToTop()">Top</button>
+  </div>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
 
     <script>
         // Display current time and date in specified format
