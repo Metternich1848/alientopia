@@ -57,7 +57,7 @@
             width: 100px;
         }
         .time {
-            font-size: 1.5em; /* Double the size */
+            font-size: 1.4em; /* Double the size */
             color: rgb(225, 168, 11); /* Change time text color to black */
             position: relative;
             top: 15px; /* 往下移一點 */
@@ -123,16 +123,16 @@
     /* Back to Top Button */
     .back-to-top {
       position: absolute;       /* 按鈕自己定位 */
-      right: 20px;              /* 靠右 */
-      bottom: 0;                /* 靠底 */
-      width: 70px;
-      height: 70px;
+      right: 15px;              /* 靠右 */
+      bottom: 15px;                /* 靠底 */
+      width: 50px;
+      height: 50px;
       border-radius: 50%;       /* 圓形 */
       border: 2px solid white;  /* 白色邊線 */
       background-color: brown;
       color: white;
       font-family: "Times New Roman", serif;
-      font-size: 18px;          /* 字體更大 */
+      font-size: 12px;          /* 字體更大 */
       cursor: pointer;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       transition: background-color 0.3s, border-radius 0.3s, clip-path 0.3s;
@@ -178,6 +178,9 @@
     }
     .color-button .text-content.long-text { 
         font-size: 0.3em; /* Reduce font size if text is too long */ 
+    }
+    .back-to-top {
+        font-size: 1em; /* Reduce size on smaller screens */
     }
 }
     </style>
@@ -691,7 +694,7 @@
     height: 50px;
     position: fixed;
     bottom: 0;          /* 固定在底部 */
-    width: 90%;        /* 佔滿整個寬度 */
+    width: 80%;        /* 佔滿整個寬度 */
     background-color: rgba(0,0,0,0.5); /* 黑色半透明 */
     border-radius: 12px;    /* 四角圓角 */
     text-align: center;
