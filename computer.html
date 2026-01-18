@@ -815,5 +815,30 @@
             btn.onclick = () => window.open(btn.getAttribute('data-url'), '_blank');
         });
     </script>
+
+<!--HumanBot: Alora Start-->
+    <script type="text/javascript" data-cfasync="false">
+        
+  // 判斷是否為手機裝置
+  var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (!isMobile) {
+    // 只有在非手機環境才載入並執行
+    var script = document.createElement("script");
+    script.src = "https://humanchat.net/build/js/hb_latest.js?v=1.5.28";
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+
+    script.onload = function() {
+      var aiBot = new AiBot({
+        embedId: 'sySmdLQR25Xe',
+        remoteBaseUrl: 'https://humanchat.net/',
+        version: '1.5.28'
+      });
+    };
+  }
+</script>
+<!--HumanBot: Alora End-->
+
 </body>
 </html>
